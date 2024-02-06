@@ -1,7 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+
+
+
+
+const  App = ()=> {
   return (
     <View style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>
@@ -9,6 +13,20 @@ export default function App() {
     </View>
   );
 }
+let EntryPoint = App;
+
+const StorybookUI = require("./.storybook").default;
+   EntryPoint = () => {
+     return (
+       <View style={{ flex: 1 }}>
+         <StorybookUI />
+       </View>
+     );
+   };
+
+
+
+export default  EntryPoint
 
 const styles = StyleSheet.create({
   container: {
