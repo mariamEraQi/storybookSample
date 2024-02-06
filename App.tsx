@@ -1,32 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar'
+import { StyleSheet, Text, View } from 'react-native'
 
-
-
-
-
-const  App = ()=> {
+const App = () => {
   return (
     <View style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
     </View>
-  );
+  )
 }
-let EntryPoint = App;
+let EntryPoint = App
 
-const StorybookUI = require("./.storybook").default;
-   EntryPoint = () => {
-     return (
-       <View style={{ flex: 1 }}>
-         <StorybookUI />
-       </View>
-     );
-   };
+const StorybookUI = require('./.storybook').default
+EntryPoint = () => {
+  return (
+    <View style={{ flex: 1 }}>
+      <StorybookUI />
+    </View>
+  )
+}
 
-
-
-export default  EntryPoint
+export default EntryPoint
 
 const styles = StyleSheet.create({
   container: {
@@ -35,4 +29,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+})

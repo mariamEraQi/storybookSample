@@ -16,24 +16,6 @@ const meta: Meta<MyButtonProps> = {
   ],
 }
 
-// const MyButtonMeta: Meta<typeof MyButton> = {
-//   title: 'MyButton',
-//   component: MyButton,
-//   argTypes: {
-//     onPress: { action: 'pressed the button' },
-//   },
-//   args: {
-//     text: 'Hello world',
-//   },
-//   decorators: [
-//     (Story) => (
-//       <View style={{ alignItems: 'center', justifyContent: 'center', flex: 1 }}>
-//         <Story />
-//       </View>
-//     ),
-//   ],
-// };
-
 export default meta
 
 type Story = StoryObj<MyButtonProps>
@@ -46,9 +28,6 @@ export const Basic: Story = {
   args: {
     disabled: false,
     text: 'Tap me',
-    // onPress: () => {
-    //   console.log('button clicked')
-    // },
   },
 }
 
@@ -58,11 +37,3 @@ export const Disabled: Story = {
     text: 'Disabled',
   },
 }
-
-// export const Basic: StoryObj<typeof MyButton> = {}
-
-// export const AnotherExample: StoryObj<typeof MyButton> = {
-//   args: {
-//     text: 'Another example',
-//   },
-// }
